@@ -8,6 +8,8 @@ Node* create_Node(int data)
 	new_node->data = data;
 	new_node->left = 0;
 	new_node->right = 0;
+	new_node->parent = 0;
+	new_node->color = 0;
 	return new_node;
 }
 

@@ -1,6 +1,7 @@
 struct node{
 	int data;
-	char color;
+	int color; //0 rojo, 1 negro
+	struct node *parent;
 	struct node *left;
 	struct node *right;
 };
