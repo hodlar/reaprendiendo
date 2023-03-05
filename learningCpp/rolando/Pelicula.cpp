@@ -18,7 +18,7 @@ Pelicula::Pelicula()
     anio = 0;
     duracion = 0;
     cantidadActores = 0;
-    listaActores = 0;
+    listaActores = (int*)malloc(10 * sizeof(int));
     titulo = "";
     genero = "";
 }
@@ -29,7 +29,7 @@ Pelicula::Pelicula(int n_num,int n_anio,int n_duracion,int n_cantAct,int *n_list
     anio = n_anio;
     duracion = n_duracion;
     cantidadActores = n_cantAct;
-    listaActores = n_listaAct;
+    listaActores = (int*)malloc(10*sizeof(int));
     titulo = n_titulo;
     genero = n_genero;
 }
@@ -122,7 +122,6 @@ bool Pelicula::add_Actor(int id)
 {
     int *tmp;
     tmp = listaActores + cantidadActores;
-    tmp = (int*)malloc(sizeof(int));
     *tmp = id;
     cantidadActores++;
     return true;
