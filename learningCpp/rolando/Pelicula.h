@@ -33,7 +33,7 @@ public:
     int* get_listaActores();
     string get_titulo();
     string get_genero();
-    int get_actorEspecifico();
+    int get_actorEspecifico(int);
     bool add_Actor(int);
 private:
     int numPelicula;

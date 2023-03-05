@@ -96,11 +96,16 @@ int* Pelicula::get_listaActores()
 
 int Pelicula::get_actorEspecifico(int index)
 {
+    int tmp;
     if(cantidadActores < 1 || cantidadActores < index)
-    { cout << "Ese actor no se encuentra en la lista" << endl; }
-    else{
-        return *(listaActores+index) ;
+    { 
+        tmp = -1;
+        cout << "Ese actor no se encuentra en la lista" << endl; 
     }
+    else{
+        tmp = *(listaActores+index) ;
+    }
+    return tmp;
 }
 
 string Pelicula::get_titulo()
@@ -115,7 +120,10 @@ string Pelicula::get_genero()
 
 bool Pelicula::add_Actor(int id)
 {
-    *(listaActores + cantidadActores) = id;
+    int *tmp;
+    tmp = listaActores + cantidadActores;
+    tmp = (int*)malloc(sizeof(int));
+    *tmp = id;
     cantidadActores++;
     return true;
 }
