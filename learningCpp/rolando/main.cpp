@@ -35,12 +35,11 @@ int main()
     }
     myfile.close();
     
-    for(int k=0; k < 10; k++)
+    
+    for(int k=0; k < actV.size() ; k++)
     {
         cout << actV[k].get_id() << actV[k].get_nombre() << endl;
     }
-
-    
     
     return 0;
 } 
